@@ -18,7 +18,7 @@ main {
     width: 870px;
     padding: 30px;
     margin-top: 21px;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 /* top players styles */
@@ -93,4 +93,65 @@ hr {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 26px;
+}
+
+/* courses styles */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.course .course-banner img {
+    width: 224px;
+    height: 104px;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: yellow;
+}
+
+.fa-star.empty {
+    color: #f3f1ff;
+}
+
+.course-star {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* media query */
+/* mobile device */
+@media only screen and (max-width:688px) {
+    .cont {
+        width: 100%;
+    }
+
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    /* tablet devices */
+@media only screen and (min-width: 688px) and (MAX-WIDTH: 992px) {
+    .cont{
+        width: 100px;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+
 }
